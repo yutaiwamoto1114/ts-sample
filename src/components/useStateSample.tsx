@@ -7,6 +7,7 @@ type CounterProps = {
 }
 
 // Counterコンポーネントの定義
+// ボタンをクリックするとカウントが増える
 const Counter = (props: CounterProps) => {
     const {initialValue} = props
     
@@ -23,10 +24,10 @@ const Counter = (props: CounterProps) => {
 
 export default Counter
 
-// reducerが受け取るactionの型を定義します
+// reducerが受け取るactionの型を定義する
 type Action = 'DECERMENT' | 'INCREMENT' | 'DOUBLE' | 'RESET'
 
-// 現在の状態とactionにもとづいて次の状態を返します
+// 現在の状態とactionにもとづいて次の状態を返す
 const reducer = (currentCount: number, action: Action) => {
     if (action=='INCREMENT') {
         return currentCount+1

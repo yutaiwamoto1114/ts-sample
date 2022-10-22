@@ -5,8 +5,9 @@ type Action = 'DECERMENT' | 'INCREMENT' | 'DOUBLE' | 'RESET'
 
 // 現在の状態とactionにもとづいて次の状態を返すreducerの定義
 const reducer = (currentCount: number, action: Action) => {
+    // actionとしてINCREMENTを受け取ったら…
     if (action=='INCREMENT') {
-        // return 次の状態
+        // 次の状態として+1を返す
         return currentCount+1
     } else if (action=='DECERMENT') {
         return currentCount-1
@@ -35,7 +36,7 @@ const Counter = (props: CounterProps) => {
     return (
         <div>
             <p>Count: {count}</p>
-            {/*ボタンが押されたらdispatch関数を使いactionを発出*/}
+            {/*ボタンが押されたらdispatch関数にactionを渡す*/}
             {/* 更新処理の記述をdispatch関数に任せているので、
                 更新呼び出し側のコードはすごくすっきり書ける
             */}
