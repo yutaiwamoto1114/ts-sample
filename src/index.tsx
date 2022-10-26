@@ -10,7 +10,8 @@ import Counter2 from './components/useReducerSample';
 import reportWebVitals from './reportWebVitals';
 // import { Parent } from './components/Parent';
 import { Parent } from './components/useCallbackSample';
-
+import { UseMemoSample } from './components/useMemoSample';
+import { Clock } from './components/Clock';
 
 const root = ReactDOM.createRoot(
 	// index.htmlにあるrootをIDに持つ要素を指定している
@@ -18,18 +19,29 @@ const root = ReactDOM.createRoot(
 );
 
 root.render(
-	// 描画するHTML要素(JSXタグという)を指定している
-	// 不適切なコードを検知するためのヘルパー
-  // 
-  <React.StrictMode> 
+  // <React.StrictMode></React.StrictMode>
+  <div>
     <App />
-    <Hello />
+    {/* <Hello /> */}
     {/* <Parent /> */}
-    <Page />
-    <Counter initialValue={1}></Counter>
-    <Counter2 initialValue={2}></Counter2>
-    <Parent></Parent>
-  </React.StrictMode>
+    {/* <Page /> */}
+    <h1>カウンター</h1>
+    <div>      
+      <Counter initialValue={1}></Counter>
+      <Counter2 initialValue={2}></Counter2>
+      <Parent></Parent>
+    </div>
+
+    <h1>メモ化</h1>
+    <div>
+      <UseMemoSample></UseMemoSample>
+    </div>
+
+    <h1>タイマー</h1>
+    <div>
+      <Clock></Clock>
+    </div>
+  </div>
 );
 
 // If you want to start measuring performance in your app, pass a function
