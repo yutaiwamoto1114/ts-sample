@@ -27,6 +27,7 @@ root.render(
     {/* <Page /> */}
     <h1>カウンター</h1>
     <div>      
+      <h2></h2>
       <Counter initialValue={1}></Counter>
       <Counter2 initialValue={2}></Counter2>
       <Parent></Parent>

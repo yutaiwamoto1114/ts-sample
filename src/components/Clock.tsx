@@ -41,7 +41,6 @@ export const Clock = () => {
     /*
         タイマーについて、useEffectが処理の源流ではあるものの、
         初期化後の更新はsetInterval()で実装したほうがよい。
-        そのため、依存配列を
     */
     // タイマーをセットするための副作用
     useEffect(() => {
@@ -67,6 +66,7 @@ export const Clock = () => {
             setLocale(getLocaleFromString(savedLocale))
         }
     },[])
+
 
     // localeが変化したときに、localstorageに値を保持するための副作用
     useEffect(() => {
