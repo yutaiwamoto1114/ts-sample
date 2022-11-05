@@ -27,15 +27,18 @@ const Child = () => {
 }
 
 const Parent = () => {
+    // User型インスタンスの生成
     const user: User = {
         id: 1,
         name: 'Alice'
     }
 
     return (
-        // Contextに値を渡す
+        // Contextにインスタンスを渡す
         <UserContext.Provider value={user}>
             <Child></Child>
         </UserContext.Provider>
     )
 }
+
+export default Parent

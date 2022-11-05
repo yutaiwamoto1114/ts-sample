@@ -9,9 +9,13 @@ import Counter from './components/useStateSample';
 import Counter2 from './components/useReducerSample';
 import reportWebVitals from './reportWebVitals';
 // import { Parent } from './components/Parent';
-import { Parent } from './components/useCallbackSample';
+// import { Parent } from './components/useCallbackSample';
 import { UseMemoSample } from './components/useMemoSample';
 import { Clock } from './components/Clock';
+// import { Parent } from './components/Parent';
+import ImageUploader from './components/useRefSample';
+import Parent from './components/useImperativeHandle';
+import { Input } from './components/useInputHook';
 
 const root = ReactDOM.createRoot(
 	// index.htmlにあるrootをIDに持つ要素を指定している
@@ -21,16 +25,15 @@ const root = ReactDOM.createRoot(
 root.render(
   // <React.StrictMode></React.StrictMode>
   <div>
-    <App />
+    {/* <App /> */}
     {/* <Hello /> */}
-    {/* <Parent /> */}
     {/* <Page /> */}
     <h1>カウンター</h1>
     <div>      
       <h2></h2>
       <Counter initialValue={1}></Counter>
       <Counter2 initialValue={2}></Counter2>
-      <Parent></Parent>
+      {/* <Parent></Parent> */}
     </div>
 
     <h1>メモ化</h1>
@@ -42,6 +45,10 @@ root.render(
     <div>
       <Clock></Clock>
     </div>
+
+    <ImageUploader></ImageUploader>
+    <Parent></Parent>
+    <Input></Input>
   </div>
 );
 
